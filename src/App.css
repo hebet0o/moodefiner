@@ -1,38 +1,92 @@
-.App {
-  text-align: center;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "primary";
+  src: url("../public/assets/candide-extralight.otf");
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@layer base{
+  @font-face{
+    font-family: 'primary';
+    font-style: normal;
+    font-weight: 400;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.btn{
+  @apply py-3 rounded-full text-black bg-primary text-white hover:transition-all ease-in-out duration-300 text-center
 }
 
-.App-link {
-  color: #61dafb;
+.btn:hover{
+  @apply text-black bg-white outline outline-primary
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.headerLink{
+  @apply hover:text-primary hover:text-lg transition-all hover:ease-in-out duration-300
+}
+.custom_menu{
+  @apply absolute flex mt-0 right-12
+}
+
+.s-1, .s-2, .s-3{
+  @apply bg-primary w-14 h-2 block m-2 transition-all duration-300
+}
+
+
+.overlay-content{
+  @apply absolute w-full text-left font-primary bg-white
+}
+
+.overlay {
+  @apply h-full w-0 fixed right-0 overflow-x-hidden transition-all bg-white
+}
+
+.link{
+  @apply text-gray-600 hover:underline
+}
+
+
+.menu_style button .s-1 {
+  transform: rotate(50deg) translateY(25px);
+  width: 70%;
+}
+
+.menu_style button .s-2 {
+  transform: translateX(200px);
+}
+
+.menu_style button .s-3 {
+  transform: rotate(-50deg) translateY(-25px);
+  width: 70%
+}
+
+.menu_width{
+  transform: translateX(0px);
+  @apply w-1/4 flex duration-500 px-12
+}
+
+/*CardComponent formázások*/
+.card-container{
+  width: 33%;
+  height: 68%;
+  @apply p-6 bg-white font-primary ml-24 rounded-none
+}
+
+.card-title{
+  @apply text-primary text-4xl mb-5 text-center
+}
+
+.card-content{
+  @apply text-gray-600 text-lg text-center py-6 
+}
+
+.home-container {
+  @apply fixed inset-0 bg-cover bg-center overflow-hidden z-0;
+}
+
+
+.inner-container {
+  @apply w-full h-screen p-6 mt-52;
 }
