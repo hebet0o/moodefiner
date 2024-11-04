@@ -7,71 +7,83 @@
   src: url("../public/assets/candide-extralight.otf");
 }
 
-@layer base {
-  @font-face {
-    font-family: "primary";
+@layer base{
+  @font-face{
+    font-family: 'primary';
     font-style: normal;
     font-weight: 400;
   }
 }
 
-.btn {
-  @apply py-3 rounded-full bg-primary text-white hover:bg-white hover:text-black transition duration-300;
+.btn{
+  @apply py-3 rounded-full text-black bg-primary text-center text-white w-full hover:transition-all ease-in-out duration-300
 }
 
-.headerLink {
-  @apply text-gray-700 hover:text-primary transition duration-300;
+.btn:hover{
+  @apply text-black bg-white outline outline-primary
 }
 
-.custom_menu {
-  @apply flex flex-col space-y-1 focus:outline-none;
+.headerLink{
+  @apply hover:text-primary hover:text-lg transition-all hover:ease-in-out duration-300
+}
+.custom_menu{
+  @apply absolute flex mt-0 right-12 overflow-hidden
 }
 
-.s-1, .s-2, .s-3 {
-  @apply bg-primary h-1 w-6 transition duration-300;
+.s-1, .s-2, .s-3{
+  @apply bg-primary w-14 h-2 block m-2 transition-all duration-300
+}
+
+
+.overlay-content{
+  @apply absolute w-full text-left font-primary overflow-x-hidden bg-white pl-2
 }
 
 .overlay {
-  @apply fixed inset-0 bg-white bg-opacity-90 z-20 flex flex-col justify-center items-center space-y-6 text-xl;
+  @apply h-2/3 w-0 fixed right-0 overflow-x-hidden transition-all
 }
 
-.overlay-content a {
-  @apply text-gray-800 hover:text-primary;
+.link{
+  @apply text-gray-600 hover:underline
 }
 
-.menu_style .s-1 {
-  transform: rotate(45deg) translateY(7px);
+
+.menu_style button .s-1 {
+  transform: rotate(50deg) translateY(25px);
+  width: 70%;
 }
 
-.menu_style .s-2 {
-  opacity: 0;
+.menu_style button .s-2 {
+  transform: translateX(200px);
 }
 
-.menu_style .s-3 {
-  transform: rotate(-45deg) translateY(-7px);
+.menu_style button .s-3 {
+  transform: rotate(-50deg) translateY(-25px);
+  width: 70%
 }
 
-.menu_width {
-  transform: translateX(0);
-  @apply w-full flex-col items-center space-y-6 px-8;
+.menu_width{;
+  @apply w-1/4 text-black flex duration-500 h-full z-50
 }
+
+.shaded{
+  @apply bg-slate-900 z-0
+}
+
 
 .card-container {
-  @apply max-w-md mx-auto p-8 bg-white shadow-lg rounded-lg;
+  width: 33%;
+  @apply bg-white font-primary rounded-none;
 }
 
 .card-title {
-  @apply text-primary text-2xl mb-4 text-center font-primary;
+  @apply text-primary text-4xl mb-5 text-center;
 }
 
 .card-content {
-  @apply text-gray-600 text-lg text-center;
+  @apply text-gray-600 text-lg text-center py-6;
 }
 
 .home-container {
-  @apply fixed inset-0 bg-cover bg-center overflow-hidden z-0;
-}
-
-.inner-container {
-  @apply flex justify-center items-center h-screen;
+  @apply flex items-center inset-0 bg-cover bg-center overflow-hidden z-0;
 }

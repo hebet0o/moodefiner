@@ -7,7 +7,7 @@ export default function HomeComponent() {
       className="home-container"
       style={{ backgroundImage: "url('/assets/pictures/homebg.jpg')" }}
     >
-      <div className="inner-container w-full flex justify-center items-center">
+      <div className="inner-container h-screen flex justify-center items-center">
         <CardComponent title="FEDEZD FEL A BELSŐ HARMÓNIÁD!">
           <p>
             Találd meg az utat a kiegyensúlyozott és boldog élethez! A MooDefiner
